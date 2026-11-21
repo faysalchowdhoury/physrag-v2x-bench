@@ -1,0 +1,31 @@
+alert_volume,method,false_escalations
+40,Rule-Only,0
+40,Standard RAG,1
+40,PhysRAG-V2X,0
+80,Rule-Only,0
+80,Standard RAG,2
+80,PhysRAG-V2X,0
+120,Rule-Only,0
+120,Standard RAG,3
+120,PhysRAG-V2X,0
+160,Rule-Only,0
+160,Standard RAG,4
+160,PhysRAG-V2X,0
+200,Rule-Only,0
+200,Standard RAG,6
+200,PhysRAG-V2X,0
+240,Rule-Only,1
+240,Standard RAG,8
+240,PhysRAG-V2X,0
+280,Rule-Only,1
+280,Standard RAG,10
+280,PhysRAG-V2X,0
+320,Rule-Only,1
+320,Standard RAG,10
+320,PhysRAG-V2X,0
+360,Rule-Only,1
+360,Standard RAG,11
+360,PhysRAG-V2X,0
+400,Rule-Only,1
+400,Standard RAG,11
+400,PhysRAG-V2X,0

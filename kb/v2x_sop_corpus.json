@@ -1,0 +1,1604 @@
+[
+  {
+    "sop_id": "SOP-HIG-001",
+    "title": "Implausible hard-braking BSM",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "sudden",
+      "deceleration",
+      "ghost",
+      "braking",
+      "emergency",
+      "electronic",
+      "brake",
+      "light",
+      "kinematic",
+      "implausibility"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": ">",
+      "threshold": 8.0
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2945/1 \u00a76.3 (MBF)",
+    "text": "Implausible hard-braking BSM. Physical regime HIGH_KINEMATIC_RISK. When accel_mps2 > 8.0, the condition indicates sudden deceleration ghost braking emergency electronic brake light kinematic implausibility. Verify the kinematic/physical proof, then apply action quarantine sender and cite SAE J2945/1 \u00a76.3 (MBF). Severity tier CRITICAL. Keywords: sudden deceleration ghost braking emergency electronic brake light kinematic implausibility."
+  },
+  {
+    "sop_id": "SOP-HIG-002",
+    "title": "Infeasible acceleration jump",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "acceleration",
+      "spike",
+      "jerk",
+      "physically",
+      "infeasible",
+      "powertrain",
+      "limit",
+      "spoofed",
+      "speed"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": ">",
+      "threshold": 6.0
+    },
+    "action_code": "REVOKE_PSEUDONYM",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2735 \u00a7BSM part I",
+    "text": "Infeasible acceleration jump. Physical regime HIGH_KINEMATIC_RISK. When accel_mps2 > 6.0, the condition indicates acceleration spike jerk physically infeasible powertrain limit spoofed speed. Verify the kinematic/physical proof, then apply action revoke pseudonym and cite SAE J2735 \u00a7BSM part I. Severity tier CRITICAL. Keywords: acceleration spike jerk physically infeasible powertrain limit spoofed speed."
+  },
+  {
+    "sop_id": "SOP-HIG-003",
+    "title": "Critical headway collapse",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "unsafe",
+      "following",
+      "headway",
+      "time",
+      "gap",
+      "tailgating",
+      "closing",
+      "speed",
+      "rear-end",
+      "shockwave"
+    ],
+    "rule": {
+      "metric": "headway_s",
+      "op": "<",
+      "threshold": 0.5
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2945/1 \u00a76.4",
+    "text": "Critical headway collapse. Physical regime HIGH_KINEMATIC_RISK. When headway_s < 0.5, the condition indicates unsafe following headway time gap tailgating closing speed rear-end shockwave. Verify the kinematic/physical proof, then apply action escalate tmc and cite SAE J2945/1 \u00a76.4. Severity tier CRITICAL. Keywords: unsafe following headway time gap tailgating closing speed rear-end shockwave."
+  },
+  {
+    "sop_id": "SOP-HIG-004",
+    "title": "Phantom lead vehicle injection",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "sybil",
+      "phantom",
+      "vehicle",
+      "fabricated",
+      "lead",
+      "emergency",
+      "braking",
+      "time",
+      "to",
+      "collision"
+    ],
+    "rule": {
+      "metric": "min_ttc_s",
+      "op": "<",
+      "threshold": 1.5
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "IEEE 1609.2 misbehavior",
+    "text": "Phantom lead vehicle injection. Physical regime HIGH_KINEMATIC_RISK. When min_ttc_s < 1.5, the condition indicates sybil phantom vehicle fabricated lead emergency braking time to collision. Verify the kinematic/physical proof, then apply action quarantine sender and cite IEEE 1609.2 misbehavior. Severity tier CRITICAL. Keywords: sybil phantom vehicle fabricated lead emergency braking time to collision."
+  },
+  {
+    "sop_id": "SOP-HIG-005",
+    "title": "Speed beyond kinematic bound",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "impossible",
+      "speed",
+      "beyond",
+      "vehicle",
+      "class",
+      "limit",
+      "falsified",
+      "velocity"
+    ],
+    "rule": {
+      "metric": "speed_mps",
+      "op": ">",
+      "threshold": 42.0
+    },
+    "action_code": "REVOKE_PSEUDONYM",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2735 \u00a7DE_Speed",
+    "text": "Speed beyond kinematic bound. Physical regime HIGH_KINEMATIC_RISK. When speed_mps > 42.0, the condition indicates impossible speed beyond vehicle class limit falsified velocity. Verify the kinematic/physical proof, then apply action revoke pseudonym and cite SAE J2735 \u00a7DE_Speed. Severity tier CRITICAL. Keywords: impossible speed beyond vehicle class limit falsified velocity."
+  },
+  {
+    "sop_id": "SOP-HIG-006",
+    "title": "Implausible hard-braking BSM (variant 2)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "sudden",
+      "deceleration",
+      "ghost",
+      "braking",
+      "emergency",
+      "electronic",
+      "brake",
+      "light",
+      "kinematic",
+      "implausibility"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": ">",
+      "threshold": 8.48
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2945/1 \u00a76.3 (MBF)",
+    "text": "Implausible hard-braking BSM. Physical regime HIGH_KINEMATIC_RISK. When accel_mps2 > 8.48, the condition indicates sudden deceleration ghost braking emergency electronic brake light kinematic implausibility. Verify the kinematic/physical proof, then apply action escalate tmc and cite SAE J2945/1 \u00a76.3 (MBF). Severity tier CRITICAL. Keywords: sudden deceleration ghost braking emergency electronic brake light kinematic implausibility."
+  },
+  {
+    "sop_id": "SOP-HIG-007",
+    "title": "Infeasible acceleration jump (variant 2)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "acceleration",
+      "spike",
+      "jerk",
+      "physically",
+      "infeasible",
+      "powertrain",
+      "limit",
+      "spoofed",
+      "speed"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": ">",
+      "threshold": 6.36
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2735 \u00a7BSM part I",
+    "text": "Infeasible acceleration jump. Physical regime HIGH_KINEMATIC_RISK. When accel_mps2 > 6.36, the condition indicates acceleration spike jerk physically infeasible powertrain limit spoofed speed. Verify the kinematic/physical proof, then apply action quarantine sender and cite SAE J2735 \u00a7BSM part I. Severity tier CRITICAL. Keywords: acceleration spike jerk physically infeasible powertrain limit spoofed speed."
+  },
+  {
+    "sop_id": "SOP-HIG-008",
+    "title": "Critical headway collapse (variant 2)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "unsafe",
+      "following",
+      "headway",
+      "time",
+      "gap",
+      "tailgating",
+      "closing",
+      "speed",
+      "rear-end",
+      "shockwave"
+    ],
+    "rule": {
+      "metric": "headway_s",
+      "op": "<",
+      "threshold": 0.47
+    },
+    "action_code": "REVOKE_PSEUDONYM",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2945/1 \u00a76.4",
+    "text": "Critical headway collapse. Physical regime HIGH_KINEMATIC_RISK. When headway_s < 0.47, the condition indicates unsafe following headway time gap tailgating closing speed rear-end shockwave. Verify the kinematic/physical proof, then apply action revoke pseudonym and cite SAE J2945/1 \u00a76.4. Severity tier CRITICAL. Keywords: unsafe following headway time gap tailgating closing speed rear-end shockwave."
+  },
+  {
+    "sop_id": "SOP-HIG-009",
+    "title": "Phantom lead vehicle injection (variant 2)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "sybil",
+      "phantom",
+      "vehicle",
+      "fabricated",
+      "lead",
+      "emergency",
+      "braking",
+      "time",
+      "to",
+      "collision"
+    ],
+    "rule": {
+      "metric": "min_ttc_s",
+      "op": "<",
+      "threshold": 1.41
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "IEEE 1609.2 misbehavior",
+    "text": "Phantom lead vehicle injection. Physical regime HIGH_KINEMATIC_RISK. When min_ttc_s < 1.41, the condition indicates sybil phantom vehicle fabricated lead emergency braking time to collision. Verify the kinematic/physical proof, then apply action escalate tmc and cite IEEE 1609.2 misbehavior. Severity tier CRITICAL. Keywords: sybil phantom vehicle fabricated lead emergency braking time to collision."
+  },
+  {
+    "sop_id": "SOP-HIG-010",
+    "title": "Speed beyond kinematic bound (variant 2)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "impossible",
+      "speed",
+      "beyond",
+      "vehicle",
+      "class",
+      "limit",
+      "falsified",
+      "velocity"
+    ],
+    "rule": {
+      "metric": "speed_mps",
+      "op": ">",
+      "threshold": 44.52
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2735 \u00a7DE_Speed",
+    "text": "Speed beyond kinematic bound. Physical regime HIGH_KINEMATIC_RISK. When speed_mps > 44.52, the condition indicates impossible speed beyond vehicle class limit falsified velocity. Verify the kinematic/physical proof, then apply action quarantine sender and cite SAE J2735 \u00a7DE_Speed. Severity tier CRITICAL. Keywords: impossible speed beyond vehicle class limit falsified velocity."
+  },
+  {
+    "sop_id": "SOP-HIG-011",
+    "title": "Implausible hard-braking BSM (variant 3)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "sudden",
+      "deceleration",
+      "ghost",
+      "braking",
+      "emergency",
+      "electronic",
+      "brake",
+      "light",
+      "kinematic",
+      "implausibility"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": ">",
+      "threshold": 8.96
+    },
+    "action_code": "REVOKE_PSEUDONYM",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2945/1 \u00a76.3 (MBF)",
+    "text": "Implausible hard-braking BSM. Physical regime HIGH_KINEMATIC_RISK. When accel_mps2 > 8.96, the condition indicates sudden deceleration ghost braking emergency electronic brake light kinematic implausibility. Verify the kinematic/physical proof, then apply action revoke pseudonym and cite SAE J2945/1 \u00a76.3 (MBF). Severity tier CRITICAL. Keywords: sudden deceleration ghost braking emergency electronic brake light kinematic implausibility."
+  },
+  {
+    "sop_id": "SOP-HIG-012",
+    "title": "Infeasible acceleration jump (variant 3)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "acceleration",
+      "spike",
+      "jerk",
+      "physically",
+      "infeasible",
+      "powertrain",
+      "limit",
+      "spoofed",
+      "speed"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": ">",
+      "threshold": 6.72
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2735 \u00a7BSM part I",
+    "text": "Infeasible acceleration jump. Physical regime HIGH_KINEMATIC_RISK. When accel_mps2 > 6.72, the condition indicates acceleration spike jerk physically infeasible powertrain limit spoofed speed. Verify the kinematic/physical proof, then apply action escalate tmc and cite SAE J2735 \u00a7BSM part I. Severity tier CRITICAL. Keywords: acceleration spike jerk physically infeasible powertrain limit spoofed speed."
+  },
+  {
+    "sop_id": "SOP-HIG-013",
+    "title": "Critical headway collapse (variant 3)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "unsafe",
+      "following",
+      "headway",
+      "time",
+      "gap",
+      "tailgating",
+      "closing",
+      "speed",
+      "rear-end",
+      "shockwave"
+    ],
+    "rule": {
+      "metric": "headway_s",
+      "op": "<",
+      "threshold": 0.44
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2945/1 \u00a76.4",
+    "text": "Critical headway collapse. Physical regime HIGH_KINEMATIC_RISK. When headway_s < 0.44, the condition indicates unsafe following headway time gap tailgating closing speed rear-end shockwave. Verify the kinematic/physical proof, then apply action quarantine sender and cite SAE J2945/1 \u00a76.4. Severity tier CRITICAL. Keywords: unsafe following headway time gap tailgating closing speed rear-end shockwave."
+  },
+  {
+    "sop_id": "SOP-HIG-014",
+    "title": "Phantom lead vehicle injection (variant 3)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "sybil",
+      "phantom",
+      "vehicle",
+      "fabricated",
+      "lead",
+      "emergency",
+      "braking",
+      "time",
+      "to",
+      "collision"
+    ],
+    "rule": {
+      "metric": "min_ttc_s",
+      "op": "<",
+      "threshold": 1.32
+    },
+    "action_code": "REVOKE_PSEUDONYM",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "IEEE 1609.2 misbehavior",
+    "text": "Phantom lead vehicle injection. Physical regime HIGH_KINEMATIC_RISK. When min_ttc_s < 1.32, the condition indicates sybil phantom vehicle fabricated lead emergency braking time to collision. Verify the kinematic/physical proof, then apply action revoke pseudonym and cite IEEE 1609.2 misbehavior. Severity tier CRITICAL. Keywords: sybil phantom vehicle fabricated lead emergency braking time to collision."
+  },
+  {
+    "sop_id": "SOP-HIG-015",
+    "title": "Speed beyond kinematic bound (variant 3)",
+    "regime_tags": [
+      "HIGH_KINEMATIC_RISK"
+    ],
+    "keywords": [
+      "impossible",
+      "speed",
+      "beyond",
+      "vehicle",
+      "class",
+      "limit",
+      "falsified",
+      "velocity"
+    ],
+    "rule": {
+      "metric": "speed_mps",
+      "op": ">",
+      "threshold": 47.04
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "CRITICAL",
+    "standard_ref": "SAE J2735 \u00a7DE_Speed",
+    "text": "Speed beyond kinematic bound. Physical regime HIGH_KINEMATIC_RISK. When speed_mps > 47.04, the condition indicates impossible speed beyond vehicle class limit falsified velocity. Verify the kinematic/physical proof, then apply action escalate tmc and cite SAE J2735 \u00a7DE_Speed. Severity tier CRITICAL. Keywords: impossible speed beyond vehicle class limit falsified velocity."
+  },
+  {
+    "sop_id": "SOP-SIG-016",
+    "title": "Spoofed SPaT green on red approach",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "SPaT",
+      "signal",
+      "phase",
+      "timing",
+      "spoof",
+      "falsified",
+      "green",
+      "red",
+      "light",
+      "running",
+      "intersection",
+      "conflict"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.5
+    },
+    "action_code": "ISSUE_RSU_ADVISORY",
+    "severity_tier": "HIGH",
+    "standard_ref": "SAE J2735 \u00a7SPaT / MAP",
+    "text": "Spoofed SPaT green on red approach. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.5, the condition indicates SPaT signal phase timing spoof falsified green red light running intersection conflict. Verify the kinematic/physical proof, then apply action issue rsu advisory and cite SAE J2735 \u00a7SPaT / MAP. Severity tier HIGH. Keywords: SPaT signal phase timing spoof falsified green red light running intersection conflict."
+  },
+  {
+    "sop_id": "SOP-SIG-017",
+    "title": "Conflicting movement authorization",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "conflicting",
+      "movement",
+      "permissive",
+      "phase",
+      "RSU",
+      "advisory",
+      "intersection",
+      "collision"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.5
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "HIGH",
+    "standard_ref": "NTCIP 1202 signal controller",
+    "text": "Conflicting movement authorization. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.5, the condition indicates conflicting movement permissive phase RSU advisory intersection collision. Verify the kinematic/physical proof, then apply action escalate tmc and cite NTCIP 1202 signal controller. Severity tier HIGH. Keywords: conflicting movement permissive phase RSU advisory intersection collision."
+  },
+  {
+    "sop_id": "SOP-SIG-018",
+    "title": "Queue spillback over capacity",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "downstream",
+      "queue",
+      "spillback",
+      "saturation",
+      "LWR",
+      "shockwave",
+      "gridlock",
+      "arterial"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": ">",
+      "threshold": 0.8
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "HIGH",
+    "standard_ref": "FHWA TMC incident playbook",
+    "text": "Queue spillback over capacity. Physical regime SIGNAL_CONFLICT. When spillback_rate > 0.8, the condition indicates downstream queue spillback saturation LWR shockwave gridlock arterial. Verify the kinematic/physical proof, then apply action quarantine sender and cite FHWA TMC incident playbook. Severity tier HIGH. Keywords: downstream queue spillback saturation LWR shockwave gridlock arterial."
+  },
+  {
+    "sop_id": "SOP-SIG-019",
+    "title": "Dilemma-zone exploitation",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "dilemma",
+      "zone",
+      "yellow",
+      "trap",
+      "signal",
+      "manipulation",
+      "forced",
+      "stop"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.5
+    },
+    "action_code": "ISSUE_RSU_ADVISORY",
+    "severity_tier": "HIGH",
+    "standard_ref": "MUTCD signal timing",
+    "text": "Dilemma-zone exploitation. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.5, the condition indicates dilemma zone yellow trap signal manipulation forced stop. Verify the kinematic/physical proof, then apply action issue rsu advisory and cite MUTCD signal timing. Severity tier HIGH. Keywords: dilemma zone yellow trap signal manipulation forced stop."
+  },
+  {
+    "sop_id": "SOP-SIG-020",
+    "title": "Spoofed SPaT green on red approach (variant 2)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "SPaT",
+      "signal",
+      "phase",
+      "timing",
+      "spoof",
+      "falsified",
+      "green",
+      "red",
+      "light",
+      "running",
+      "intersection",
+      "conflict"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.53
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "HIGH",
+    "standard_ref": "SAE J2735 \u00a7SPaT / MAP",
+    "text": "Spoofed SPaT green on red approach. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.53, the condition indicates SPaT signal phase timing spoof falsified green red light running intersection conflict. Verify the kinematic/physical proof, then apply action escalate tmc and cite SAE J2735 \u00a7SPaT / MAP. Severity tier HIGH. Keywords: SPaT signal phase timing spoof falsified green red light running intersection conflict."
+  },
+  {
+    "sop_id": "SOP-SIG-021",
+    "title": "Conflicting movement authorization (variant 2)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "conflicting",
+      "movement",
+      "permissive",
+      "phase",
+      "RSU",
+      "advisory",
+      "intersection",
+      "collision"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.53
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "HIGH",
+    "standard_ref": "NTCIP 1202 signal controller",
+    "text": "Conflicting movement authorization. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.53, the condition indicates conflicting movement permissive phase RSU advisory intersection collision. Verify the kinematic/physical proof, then apply action quarantine sender and cite NTCIP 1202 signal controller. Severity tier HIGH. Keywords: conflicting movement permissive phase RSU advisory intersection collision."
+  },
+  {
+    "sop_id": "SOP-SIG-022",
+    "title": "Queue spillback over capacity (variant 2)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "downstream",
+      "queue",
+      "spillback",
+      "saturation",
+      "LWR",
+      "shockwave",
+      "gridlock",
+      "arterial"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": ">",
+      "threshold": 0.848
+    },
+    "action_code": "ISSUE_RSU_ADVISORY",
+    "severity_tier": "HIGH",
+    "standard_ref": "FHWA TMC incident playbook",
+    "text": "Queue spillback over capacity. Physical regime SIGNAL_CONFLICT. When spillback_rate > 0.848, the condition indicates downstream queue spillback saturation LWR shockwave gridlock arterial. Verify the kinematic/physical proof, then apply action issue rsu advisory and cite FHWA TMC incident playbook. Severity tier HIGH. Keywords: downstream queue spillback saturation LWR shockwave gridlock arterial."
+  },
+  {
+    "sop_id": "SOP-SIG-023",
+    "title": "Dilemma-zone exploitation (variant 2)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "dilemma",
+      "zone",
+      "yellow",
+      "trap",
+      "signal",
+      "manipulation",
+      "forced",
+      "stop"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.53
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "HIGH",
+    "standard_ref": "MUTCD signal timing",
+    "text": "Dilemma-zone exploitation. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.53, the condition indicates dilemma zone yellow trap signal manipulation forced stop. Verify the kinematic/physical proof, then apply action escalate tmc and cite MUTCD signal timing. Severity tier HIGH. Keywords: dilemma zone yellow trap signal manipulation forced stop."
+  },
+  {
+    "sop_id": "SOP-SIG-024",
+    "title": "Spoofed SPaT green on red approach (variant 3)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "SPaT",
+      "signal",
+      "phase",
+      "timing",
+      "spoof",
+      "falsified",
+      "green",
+      "red",
+      "light",
+      "running",
+      "intersection",
+      "conflict"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.56
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "HIGH",
+    "standard_ref": "SAE J2735 \u00a7SPaT / MAP",
+    "text": "Spoofed SPaT green on red approach. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.56, the condition indicates SPaT signal phase timing spoof falsified green red light running intersection conflict. Verify the kinematic/physical proof, then apply action quarantine sender and cite SAE J2735 \u00a7SPaT / MAP. Severity tier HIGH. Keywords: SPaT signal phase timing spoof falsified green red light running intersection conflict."
+  },
+  {
+    "sop_id": "SOP-SIG-025",
+    "title": "Conflicting movement authorization (variant 3)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "conflicting",
+      "movement",
+      "permissive",
+      "phase",
+      "RSU",
+      "advisory",
+      "intersection",
+      "collision"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.56
+    },
+    "action_code": "ISSUE_RSU_ADVISORY",
+    "severity_tier": "HIGH",
+    "standard_ref": "NTCIP 1202 signal controller",
+    "text": "Conflicting movement authorization. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.56, the condition indicates conflicting movement permissive phase RSU advisory intersection collision. Verify the kinematic/physical proof, then apply action issue rsu advisory and cite NTCIP 1202 signal controller. Severity tier HIGH. Keywords: conflicting movement permissive phase RSU advisory intersection collision."
+  },
+  {
+    "sop_id": "SOP-SIG-026",
+    "title": "Queue spillback over capacity (variant 3)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "downstream",
+      "queue",
+      "spillback",
+      "saturation",
+      "LWR",
+      "shockwave",
+      "gridlock",
+      "arterial"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": ">",
+      "threshold": 0.896
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "HIGH",
+    "standard_ref": "FHWA TMC incident playbook",
+    "text": "Queue spillback over capacity. Physical regime SIGNAL_CONFLICT. When spillback_rate > 0.896, the condition indicates downstream queue spillback saturation LWR shockwave gridlock arterial. Verify the kinematic/physical proof, then apply action escalate tmc and cite FHWA TMC incident playbook. Severity tier HIGH. Keywords: downstream queue spillback saturation LWR shockwave gridlock arterial."
+  },
+  {
+    "sop_id": "SOP-SIG-027",
+    "title": "Dilemma-zone exploitation (variant 3)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "dilemma",
+      "zone",
+      "yellow",
+      "trap",
+      "signal",
+      "manipulation",
+      "forced",
+      "stop"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.56
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "HIGH",
+    "standard_ref": "MUTCD signal timing",
+    "text": "Dilemma-zone exploitation. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.56, the condition indicates dilemma zone yellow trap signal manipulation forced stop. Verify the kinematic/physical proof, then apply action quarantine sender and cite MUTCD signal timing. Severity tier HIGH. Keywords: dilemma zone yellow trap signal manipulation forced stop."
+  },
+  {
+    "sop_id": "SOP-SIG-028",
+    "title": "Spoofed SPaT green on red approach (variant 4)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "SPaT",
+      "signal",
+      "phase",
+      "timing",
+      "spoof",
+      "falsified",
+      "green",
+      "red",
+      "light",
+      "running",
+      "intersection",
+      "conflict"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.59
+    },
+    "action_code": "ISSUE_RSU_ADVISORY",
+    "severity_tier": "HIGH",
+    "standard_ref": "SAE J2735 \u00a7SPaT / MAP",
+    "text": "Spoofed SPaT green on red approach. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.59, the condition indicates SPaT signal phase timing spoof falsified green red light running intersection conflict. Verify the kinematic/physical proof, then apply action issue rsu advisory and cite SAE J2735 \u00a7SPaT / MAP. Severity tier HIGH. Keywords: SPaT signal phase timing spoof falsified green red light running intersection conflict."
+  },
+  {
+    "sop_id": "SOP-SIG-029",
+    "title": "Conflicting movement authorization (variant 4)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "conflicting",
+      "movement",
+      "permissive",
+      "phase",
+      "RSU",
+      "advisory",
+      "intersection",
+      "collision"
+    ],
+    "rule": {
+      "metric": "phase_conflict",
+      "op": ">",
+      "threshold": 0.59
+    },
+    "action_code": "ESCALATE_TMC",
+    "severity_tier": "HIGH",
+    "standard_ref": "NTCIP 1202 signal controller",
+    "text": "Conflicting movement authorization. Physical regime SIGNAL_CONFLICT. When phase_conflict > 0.59, the condition indicates conflicting movement permissive phase RSU advisory intersection collision. Verify the kinematic/physical proof, then apply action escalate tmc and cite NTCIP 1202 signal controller. Severity tier HIGH. Keywords: conflicting movement permissive phase RSU advisory intersection collision."
+  },
+  {
+    "sop_id": "SOP-SIG-030",
+    "title": "Queue spillback over capacity (variant 4)",
+    "regime_tags": [
+      "SIGNAL_CONFLICT"
+    ],
+    "keywords": [
+      "downstream",
+      "queue",
+      "spillback",
+      "saturation",
+      "LWR",
+      "shockwave",
+      "gridlock",
+      "arterial"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": ">",
+      "threshold": 0.944
+    },
+    "action_code": "QUARANTINE_SENDER",
+    "severity_tier": "HIGH",
+    "standard_ref": "FHWA TMC incident playbook",
+    "text": "Queue spillback over capacity. Physical regime SIGNAL_CONFLICT. When spillback_rate > 0.944, the condition indicates downstream queue spillback saturation LWR shockwave gridlock arterial. Verify the kinematic/physical proof, then apply action quarantine sender and cite FHWA TMC incident playbook. Severity tier HIGH. Keywords: downstream queue spillback saturation LWR shockwave gridlock arterial."
+  },
+  {
+    "sop_id": "SOP-SEN-031",
+    "title": "GNSS position drift anomaly",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "GPS",
+      "GNSS",
+      "position",
+      "drift",
+      "dead",
+      "reckoning",
+      "residual",
+      "multipath",
+      "degraded",
+      "fix"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 2.5
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "GNSS position drift anomaly. Physical regime SENSOR_DRIFT. When pos_residual_m > 2.5, the condition indicates GPS GNSS position drift dead reckoning residual multipath degraded fix. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: GPS GNSS position drift dead reckoning residual multipath degraded fix."
+  },
+  {
+    "sop_id": "SOP-SEN-032",
+    "title": "Clock / timestamp skew",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "timestamp",
+      "skew",
+      "clock",
+      "desync",
+      "stale",
+      "message",
+      "inter-arrival",
+      "jitter"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": ">",
+      "threshold": 0.3
+    },
+    "action_code": "FLAG_FOR_REVIEW",
+    "severity_tier": "MODERATE",
+    "standard_ref": "IEEE 1609.3 timing",
+    "text": "Clock / timestamp skew. Physical regime SENSOR_DRIFT. When time_skew_s > 0.3, the condition indicates timestamp skew clock desync stale message inter-arrival jitter. Verify the kinematic/physical proof, then apply action flag for review and cite IEEE 1609.3 timing. Severity tier MODERATE. Keywords: timestamp skew clock desync stale message inter-arrival jitter."
+  },
+  {
+    "sop_id": "SOP-SEN-033",
+    "title": "Low-confidence localization",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "position",
+      "confidence",
+      "degraded",
+      "accuracy",
+      "covariance",
+      "sensor",
+      "calibration"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 1.8
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Low-confidence localization. Physical regime SENSOR_DRIFT. When pos_residual_m > 1.8, the condition indicates position confidence degraded accuracy covariance sensor calibration. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: position confidence degraded accuracy covariance sensor calibration."
+  },
+  {
+    "sop_id": "SOP-SEN-034",
+    "title": "Intermittent BSM dropout",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "dropout",
+      "missing",
+      "beacon",
+      "channel",
+      "congestion",
+      "gap",
+      "recalibrate"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": ">",
+      "threshold": 0.5
+    },
+    "action_code": "FLAG_FOR_REVIEW",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a75",
+    "text": "Intermittent BSM dropout. Physical regime SENSOR_DRIFT. When time_skew_s > 0.5, the condition indicates dropout missing beacon channel congestion gap recalibrate. Verify the kinematic/physical proof, then apply action flag for review and cite SAE J2945/1 \u00a75. Severity tier MODERATE. Keywords: dropout missing beacon channel congestion gap recalibrate."
+  },
+  {
+    "sop_id": "SOP-SEN-035",
+    "title": "GNSS position drift anomaly (variant 2)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "GPS",
+      "GNSS",
+      "position",
+      "drift",
+      "dead",
+      "reckoning",
+      "residual",
+      "multipath",
+      "degraded",
+      "fix"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 2.65
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "GNSS position drift anomaly. Physical regime SENSOR_DRIFT. When pos_residual_m > 2.65, the condition indicates GPS GNSS position drift dead reckoning residual multipath degraded fix. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: GPS GNSS position drift dead reckoning residual multipath degraded fix."
+  },
+  {
+    "sop_id": "SOP-SEN-036",
+    "title": "Clock / timestamp skew (variant 2)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "timestamp",
+      "skew",
+      "clock",
+      "desync",
+      "stale",
+      "message",
+      "inter-arrival",
+      "jitter"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": ">",
+      "threshold": 0.318
+    },
+    "action_code": "FLAG_FOR_REVIEW",
+    "severity_tier": "MODERATE",
+    "standard_ref": "IEEE 1609.3 timing",
+    "text": "Clock / timestamp skew. Physical regime SENSOR_DRIFT. When time_skew_s > 0.318, the condition indicates timestamp skew clock desync stale message inter-arrival jitter. Verify the kinematic/physical proof, then apply action flag for review and cite IEEE 1609.3 timing. Severity tier MODERATE. Keywords: timestamp skew clock desync stale message inter-arrival jitter."
+  },
+  {
+    "sop_id": "SOP-SEN-037",
+    "title": "Low-confidence localization (variant 2)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "position",
+      "confidence",
+      "degraded",
+      "accuracy",
+      "covariance",
+      "sensor",
+      "calibration"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 1.908
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Low-confidence localization. Physical regime SENSOR_DRIFT. When pos_residual_m > 1.908, the condition indicates position confidence degraded accuracy covariance sensor calibration. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: position confidence degraded accuracy covariance sensor calibration."
+  },
+  {
+    "sop_id": "SOP-SEN-038",
+    "title": "Intermittent BSM dropout (variant 2)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "dropout",
+      "missing",
+      "beacon",
+      "channel",
+      "congestion",
+      "gap",
+      "recalibrate"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": ">",
+      "threshold": 0.53
+    },
+    "action_code": "FLAG_FOR_REVIEW",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a75",
+    "text": "Intermittent BSM dropout. Physical regime SENSOR_DRIFT. When time_skew_s > 0.53, the condition indicates dropout missing beacon channel congestion gap recalibrate. Verify the kinematic/physical proof, then apply action flag for review and cite SAE J2945/1 \u00a75. Severity tier MODERATE. Keywords: dropout missing beacon channel congestion gap recalibrate."
+  },
+  {
+    "sop_id": "SOP-SEN-039",
+    "title": "GNSS position drift anomaly (variant 3)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "GPS",
+      "GNSS",
+      "position",
+      "drift",
+      "dead",
+      "reckoning",
+      "residual",
+      "multipath",
+      "degraded",
+      "fix"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 2.8
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "GNSS position drift anomaly. Physical regime SENSOR_DRIFT. When pos_residual_m > 2.8, the condition indicates GPS GNSS position drift dead reckoning residual multipath degraded fix. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: GPS GNSS position drift dead reckoning residual multipath degraded fix."
+  },
+  {
+    "sop_id": "SOP-SEN-040",
+    "title": "Clock / timestamp skew (variant 3)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "timestamp",
+      "skew",
+      "clock",
+      "desync",
+      "stale",
+      "message",
+      "inter-arrival",
+      "jitter"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": ">",
+      "threshold": 0.336
+    },
+    "action_code": "FLAG_FOR_REVIEW",
+    "severity_tier": "MODERATE",
+    "standard_ref": "IEEE 1609.3 timing",
+    "text": "Clock / timestamp skew. Physical regime SENSOR_DRIFT. When time_skew_s > 0.336, the condition indicates timestamp skew clock desync stale message inter-arrival jitter. Verify the kinematic/physical proof, then apply action flag for review and cite IEEE 1609.3 timing. Severity tier MODERATE. Keywords: timestamp skew clock desync stale message inter-arrival jitter."
+  },
+  {
+    "sop_id": "SOP-SEN-041",
+    "title": "Low-confidence localization (variant 3)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "position",
+      "confidence",
+      "degraded",
+      "accuracy",
+      "covariance",
+      "sensor",
+      "calibration"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 2.016
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Low-confidence localization. Physical regime SENSOR_DRIFT. When pos_residual_m > 2.016, the condition indicates position confidence degraded accuracy covariance sensor calibration. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: position confidence degraded accuracy covariance sensor calibration."
+  },
+  {
+    "sop_id": "SOP-SEN-042",
+    "title": "Intermittent BSM dropout (variant 3)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "dropout",
+      "missing",
+      "beacon",
+      "channel",
+      "congestion",
+      "gap",
+      "recalibrate"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": ">",
+      "threshold": 0.56
+    },
+    "action_code": "FLAG_FOR_REVIEW",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a75",
+    "text": "Intermittent BSM dropout. Physical regime SENSOR_DRIFT. When time_skew_s > 0.56, the condition indicates dropout missing beacon channel congestion gap recalibrate. Verify the kinematic/physical proof, then apply action flag for review and cite SAE J2945/1 \u00a75. Severity tier MODERATE. Keywords: dropout missing beacon channel congestion gap recalibrate."
+  },
+  {
+    "sop_id": "SOP-SEN-043",
+    "title": "GNSS position drift anomaly (variant 4)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "GPS",
+      "GNSS",
+      "position",
+      "drift",
+      "dead",
+      "reckoning",
+      "residual",
+      "multipath",
+      "degraded",
+      "fix"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 2.95
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "GNSS position drift anomaly. Physical regime SENSOR_DRIFT. When pos_residual_m > 2.95, the condition indicates GPS GNSS position drift dead reckoning residual multipath degraded fix. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: GPS GNSS position drift dead reckoning residual multipath degraded fix."
+  },
+  {
+    "sop_id": "SOP-SEN-044",
+    "title": "Clock / timestamp skew (variant 4)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "timestamp",
+      "skew",
+      "clock",
+      "desync",
+      "stale",
+      "message",
+      "inter-arrival",
+      "jitter"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": ">",
+      "threshold": 0.354
+    },
+    "action_code": "FLAG_FOR_REVIEW",
+    "severity_tier": "MODERATE",
+    "standard_ref": "IEEE 1609.3 timing",
+    "text": "Clock / timestamp skew. Physical regime SENSOR_DRIFT. When time_skew_s > 0.354, the condition indicates timestamp skew clock desync stale message inter-arrival jitter. Verify the kinematic/physical proof, then apply action flag for review and cite IEEE 1609.3 timing. Severity tier MODERATE. Keywords: timestamp skew clock desync stale message inter-arrival jitter."
+  },
+  {
+    "sop_id": "SOP-SEN-045",
+    "title": "Low-confidence localization (variant 4)",
+    "regime_tags": [
+      "SENSOR_DRIFT"
+    ],
+    "keywords": [
+      "position",
+      "confidence",
+      "degraded",
+      "accuracy",
+      "covariance",
+      "sensor",
+      "calibration"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": ">",
+      "threshold": 2.124
+    },
+    "action_code": "RECALIBRATE_SENSOR",
+    "severity_tier": "MODERATE",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Low-confidence localization. Physical regime SENSOR_DRIFT. When pos_residual_m > 2.124, the condition indicates position confidence degraded accuracy covariance sensor calibration. Verify the kinematic/physical proof, then apply action recalibrate sensor and cite SAE J2945/1 \u00a76.2. Severity tier MODERATE. Keywords: position confidence degraded accuracy covariance sensor calibration."
+  },
+  {
+    "sop_id": "SOP-BEN-046",
+    "title": "Nominal GPS jitter",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "benign",
+      "gps",
+      "jitter",
+      "noise",
+      "within",
+      "tolerance",
+      "normal",
+      "nominal",
+      "no",
+      "action"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": "<",
+      "threshold": 1.0
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Nominal GPS jitter. Physical regime BENIGN_NOISE. When pos_residual_m < 1.0, the condition indicates benign gps jitter noise within tolerance normal nominal no action. Verify the kinematic/physical proof, then apply action suppress alert and cite SAE J2945/1 \u00a76.2. Severity tier LOW. Keywords: benign gps jitter noise within tolerance normal nominal no action."
+  },
+  {
+    "sop_id": "SOP-BEN-047",
+    "title": "Routine deceleration",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "normal",
+      "braking",
+      "comfortable",
+      "deceleration",
+      "routine",
+      "traffic",
+      "benign"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": "<",
+      "threshold": 3.0
+    },
+    "action_code": "NO_ACTION",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2735 \u00a7BSM",
+    "text": "Routine deceleration. Physical regime BENIGN_NOISE. When accel_mps2 < 3.0, the condition indicates normal braking comfortable deceleration routine traffic benign. Verify the kinematic/physical proof, then apply action no action and cite SAE J2735 \u00a7BSM. Severity tier LOW. Keywords: normal braking comfortable deceleration routine traffic benign."
+  },
+  {
+    "sop_id": "SOP-BEN-048",
+    "title": "Flash-crowd congestion (benign)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "recurring",
+      "congestion",
+      "benign",
+      "flash",
+      "crowd",
+      "peak",
+      "demand",
+      "expected"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": "<",
+      "threshold": 0.5
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "FHWA congestion mgmt",
+    "text": "Flash-crowd congestion (benign). Physical regime BENIGN_NOISE. When spillback_rate < 0.5, the condition indicates recurring congestion benign flash crowd peak demand expected. Verify the kinematic/physical proof, then apply action suppress alert and cite FHWA congestion mgmt. Severity tier LOW. Keywords: recurring congestion benign flash crowd peak demand expected."
+  },
+  {
+    "sop_id": "SOP-BEN-049",
+    "title": "Tolerable timing jitter",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "minor",
+      "jitter",
+      "acceptable",
+      "latency",
+      "within",
+      "spec",
+      "suppress",
+      "alert"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": "<",
+      "threshold": 0.15
+    },
+    "action_code": "NO_ACTION",
+    "severity_tier": "LOW",
+    "standard_ref": "IEEE 1609.3",
+    "text": "Tolerable timing jitter. Physical regime BENIGN_NOISE. When time_skew_s < 0.15, the condition indicates minor jitter acceptable latency within spec suppress alert. Verify the kinematic/physical proof, then apply action no action and cite IEEE 1609.3. Severity tier LOW. Keywords: minor jitter acceptable latency within spec suppress alert."
+  },
+  {
+    "sop_id": "SOP-BEN-050",
+    "title": "Nominal GPS jitter (variant 2)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "benign",
+      "gps",
+      "jitter",
+      "noise",
+      "within",
+      "tolerance",
+      "normal",
+      "nominal",
+      "no",
+      "action"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": "<",
+      "threshold": 0.94
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Nominal GPS jitter. Physical regime BENIGN_NOISE. When pos_residual_m < 0.94, the condition indicates benign gps jitter noise within tolerance normal nominal no action. Verify the kinematic/physical proof, then apply action suppress alert and cite SAE J2945/1 \u00a76.2. Severity tier LOW. Keywords: benign gps jitter noise within tolerance normal nominal no action."
+  },
+  {
+    "sop_id": "SOP-BEN-051",
+    "title": "Routine deceleration (variant 2)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "normal",
+      "braking",
+      "comfortable",
+      "deceleration",
+      "routine",
+      "traffic",
+      "benign"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": "<",
+      "threshold": 2.82
+    },
+    "action_code": "NO_ACTION",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2735 \u00a7BSM",
+    "text": "Routine deceleration. Physical regime BENIGN_NOISE. When accel_mps2 < 2.82, the condition indicates normal braking comfortable deceleration routine traffic benign. Verify the kinematic/physical proof, then apply action no action and cite SAE J2735 \u00a7BSM. Severity tier LOW. Keywords: normal braking comfortable deceleration routine traffic benign."
+  },
+  {
+    "sop_id": "SOP-BEN-052",
+    "title": "Flash-crowd congestion (benign) (variant 2)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "recurring",
+      "congestion",
+      "benign",
+      "flash",
+      "crowd",
+      "peak",
+      "demand",
+      "expected"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": "<",
+      "threshold": 0.47
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "FHWA congestion mgmt",
+    "text": "Flash-crowd congestion (benign). Physical regime BENIGN_NOISE. When spillback_rate < 0.47, the condition indicates recurring congestion benign flash crowd peak demand expected. Verify the kinematic/physical proof, then apply action suppress alert and cite FHWA congestion mgmt. Severity tier LOW. Keywords: recurring congestion benign flash crowd peak demand expected."
+  },
+  {
+    "sop_id": "SOP-BEN-053",
+    "title": "Tolerable timing jitter (variant 2)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "minor",
+      "jitter",
+      "acceptable",
+      "latency",
+      "within",
+      "spec",
+      "suppress",
+      "alert"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": "<",
+      "threshold": 0.141
+    },
+    "action_code": "NO_ACTION",
+    "severity_tier": "LOW",
+    "standard_ref": "IEEE 1609.3",
+    "text": "Tolerable timing jitter. Physical regime BENIGN_NOISE. When time_skew_s < 0.141, the condition indicates minor jitter acceptable latency within spec suppress alert. Verify the kinematic/physical proof, then apply action no action and cite IEEE 1609.3. Severity tier LOW. Keywords: minor jitter acceptable latency within spec suppress alert."
+  },
+  {
+    "sop_id": "SOP-BEN-054",
+    "title": "Nominal GPS jitter (variant 3)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "benign",
+      "gps",
+      "jitter",
+      "noise",
+      "within",
+      "tolerance",
+      "normal",
+      "nominal",
+      "no",
+      "action"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": "<",
+      "threshold": 0.88
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Nominal GPS jitter. Physical regime BENIGN_NOISE. When pos_residual_m < 0.88, the condition indicates benign gps jitter noise within tolerance normal nominal no action. Verify the kinematic/physical proof, then apply action suppress alert and cite SAE J2945/1 \u00a76.2. Severity tier LOW. Keywords: benign gps jitter noise within tolerance normal nominal no action."
+  },
+  {
+    "sop_id": "SOP-BEN-055",
+    "title": "Routine deceleration (variant 3)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "normal",
+      "braking",
+      "comfortable",
+      "deceleration",
+      "routine",
+      "traffic",
+      "benign"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": "<",
+      "threshold": 2.64
+    },
+    "action_code": "NO_ACTION",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2735 \u00a7BSM",
+    "text": "Routine deceleration. Physical regime BENIGN_NOISE. When accel_mps2 < 2.64, the condition indicates normal braking comfortable deceleration routine traffic benign. Verify the kinematic/physical proof, then apply action no action and cite SAE J2735 \u00a7BSM. Severity tier LOW. Keywords: normal braking comfortable deceleration routine traffic benign."
+  },
+  {
+    "sop_id": "SOP-BEN-056",
+    "title": "Flash-crowd congestion (benign) (variant 3)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "recurring",
+      "congestion",
+      "benign",
+      "flash",
+      "crowd",
+      "peak",
+      "demand",
+      "expected"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": "<",
+      "threshold": 0.44
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "FHWA congestion mgmt",
+    "text": "Flash-crowd congestion (benign). Physical regime BENIGN_NOISE. When spillback_rate < 0.44, the condition indicates recurring congestion benign flash crowd peak demand expected. Verify the kinematic/physical proof, then apply action suppress alert and cite FHWA congestion mgmt. Severity tier LOW. Keywords: recurring congestion benign flash crowd peak demand expected."
+  },
+  {
+    "sop_id": "SOP-BEN-057",
+    "title": "Tolerable timing jitter (variant 3)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "minor",
+      "jitter",
+      "acceptable",
+      "latency",
+      "within",
+      "spec",
+      "suppress",
+      "alert"
+    ],
+    "rule": {
+      "metric": "time_skew_s",
+      "op": "<",
+      "threshold": 0.132
+    },
+    "action_code": "NO_ACTION",
+    "severity_tier": "LOW",
+    "standard_ref": "IEEE 1609.3",
+    "text": "Tolerable timing jitter. Physical regime BENIGN_NOISE. When time_skew_s < 0.132, the condition indicates minor jitter acceptable latency within spec suppress alert. Verify the kinematic/physical proof, then apply action no action and cite IEEE 1609.3. Severity tier LOW. Keywords: minor jitter acceptable latency within spec suppress alert."
+  },
+  {
+    "sop_id": "SOP-BEN-058",
+    "title": "Nominal GPS jitter (variant 4)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "benign",
+      "gps",
+      "jitter",
+      "noise",
+      "within",
+      "tolerance",
+      "normal",
+      "nominal",
+      "no",
+      "action"
+    ],
+    "rule": {
+      "metric": "pos_residual_m",
+      "op": "<",
+      "threshold": 0.82
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2945/1 \u00a76.2",
+    "text": "Nominal GPS jitter. Physical regime BENIGN_NOISE. When pos_residual_m < 0.82, the condition indicates benign gps jitter noise within tolerance normal nominal no action. Verify the kinematic/physical proof, then apply action suppress alert and cite SAE J2945/1 \u00a76.2. Severity tier LOW. Keywords: benign gps jitter noise within tolerance normal nominal no action."
+  },
+  {
+    "sop_id": "SOP-BEN-059",
+    "title": "Routine deceleration (variant 4)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "normal",
+      "braking",
+      "comfortable",
+      "deceleration",
+      "routine",
+      "traffic",
+      "benign"
+    ],
+    "rule": {
+      "metric": "accel_mps2",
+      "op": "<",
+      "threshold": 2.46
+    },
+    "action_code": "NO_ACTION",
+    "severity_tier": "LOW",
+    "standard_ref": "SAE J2735 \u00a7BSM",
+    "text": "Routine deceleration. Physical regime BENIGN_NOISE. When accel_mps2 < 2.46, the condition indicates normal braking comfortable deceleration routine traffic benign. Verify the kinematic/physical proof, then apply action no action and cite SAE J2735 \u00a7BSM. Severity tier LOW. Keywords: normal braking comfortable deceleration routine traffic benign."
+  },
+  {
+    "sop_id": "SOP-BEN-060",
+    "title": "Flash-crowd congestion (benign) (variant 4)",
+    "regime_tags": [
+      "BENIGN_NOISE"
+    ],
+    "keywords": [
+      "recurring",
+      "congestion",
+      "benign",
+      "flash",
+      "crowd",
+      "peak",
+      "demand",
+      "expected"
+    ],
+    "rule": {
+      "metric": "spillback_rate",
+      "op": "<",
+      "threshold": 0.41
+    },
+    "action_code": "SUPPRESS_ALERT",
+    "severity_tier": "LOW",
+    "standard_ref": "FHWA congestion mgmt",
+    "text": "Flash-crowd congestion (benign). Physical regime BENIGN_NOISE. When spillback_rate < 0.41, the condition indicates recurring congestion benign flash crowd peak demand expected. Verify the kinematic/physical proof, then apply action suppress alert and cite FHWA congestion mgmt. Severity tier LOW. Keywords: recurring congestion benign flash crowd peak demand expected."
+  }
+]
